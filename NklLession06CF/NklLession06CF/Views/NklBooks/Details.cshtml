@@ -1,0 +1,74 @@
+﻿@model NklLession06CF.Models.NklBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NklBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NklBookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklBookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklPulisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklPulisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NklCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NklCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NklId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

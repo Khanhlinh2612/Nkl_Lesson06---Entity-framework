@@ -1,0 +1,69 @@
+﻿@model IEnumerable<NklLession06CF.Models.NklBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NklBookId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklPulisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NklCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklBookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklPulisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NklCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NklId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NklId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NklId })
+        </td>
+    </tr>
+}
+
+</table>
